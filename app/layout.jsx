@@ -1,19 +1,27 @@
-import "@/assets/styles/globals.css"
+import "@/assets/styles/globals.css";
+import NavBar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import AuthProvider from "@/components/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
-  title: 'Property NestPick',
-  keywords: 'rental, property, real estate',
-  description: "Find the perfect rental property"
-}
-const MainLayout = ({children}) => {
- return(
-    <html> 
+  title: "Property NestPick",
+  keywords: "rental, property, real estate",
+  description: "Find the perfect rental property",
+};
+const MainLayout = ({ children }) => {
+  return (
+    <AuthProvider>
+      <html>
         <body>
-            <main>
-               {children}
-            </main>
+          <NavBar />
+          <main>{children}</main>
+          <Footer />
+          <ToastContainer />
         </body>
-    </html>
- )
-}
+      </html>
+    </AuthProvider>
+  );
+};
 export default MainLayout;
