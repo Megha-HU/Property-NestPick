@@ -12,7 +12,7 @@ const PropertiesPage = async () => {
         {properties?.lenght === 0 ? (
           <p>No Properties Found</p>
         ) : (
-          <div className="grid grid-color-1 md: grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {properties?.map((property, index) => (
               <div key={property._id}>
                 <PropertyCard key={property._id} property={property} />
