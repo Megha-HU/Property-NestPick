@@ -23,7 +23,7 @@ const SearchResultsPage = async ({
     ],
   };
   if (propertyType && propertyType !== "All") {
-    const typePattern = new Regex(propertyType, "i");
+    const typePattern = new RegExp(propertyType, "i");
     query.type = typePattern;
   }
   const propertyQueryResults = await Property.find(query).lean();
