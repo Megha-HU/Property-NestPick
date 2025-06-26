@@ -42,7 +42,7 @@ const PropertySearchForm = () => {
             id="property-type"
             className="w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500"
             value={propertyType}
-            onChange={(e) => setPropertyType(e.target, value)}
+            onChange={(e) => setPropertyType(e.target.value)}
           >
             <option value="All">All</option>
             <option value="Apartment">Apartment</option>
